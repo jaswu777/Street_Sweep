@@ -10,5 +10,9 @@ def first_one():
 def second_one():
 	return render_template('testonenumber.html')
 
+@app.route("/test_this/")
+def third_one():
+	return "it worked again"
+
 if __name__ == '__main__':
 	app.run(debug = True)
