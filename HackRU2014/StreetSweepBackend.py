@@ -6,5 +6,9 @@ app = Flask(__name__)
 def first_one():
 	return "it works!"
 
+@app.route("/number_one/")
+def second_one():
+	return render_template('testonenumber.html')
+
 if __name__ == '__main__':
 	app.run(debug = True)
