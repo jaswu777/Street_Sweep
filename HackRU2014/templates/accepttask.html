@@ -5,6 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Street Sweep | Accept a Bounty</title>
     <link rel="stylesheet" href="foundation/css/foundation.css" />
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+    <script>
+    function initialize() {
+      var myLatlng = new google.maps.LatLng({{lat}}, {{lon}});
+      var mapOptions = {
+        zoom: 14,
+        center: myLatlng
+      };
+
+      var map = new google.maps.Map(
+          document.getElementById('map-canvas'),
+          mapOptions);
+
+      var marker = new google.maps.Marker({
+        position: myLatlng,
+        map: map,
+        title: "Your Location!"
+      }); 
+    }
+    google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
+    <style>
+    html, body, #map-canvas {
+      height: 100%;
+      margin: 0px;
+      padding: 0px;
+    }
+    </style>
+
     <script src="foundation/js/vendor/modernizr.js"></script>
   </head>
   <body>
@@ -28,24 +57,9 @@
           proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
           </p>
           <strong>Location:</strong>
-          <!-- MAP GOES HERE! -->
+          <div id="map-canvas"></div>
         </div>
-      </div>
-            <div class="large-12 columns">
-        <div class="callout panel">
-          <h5>Pick up this shit - Garbage Pickup</h5>
-          <strong>Description:</strong>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-          cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-          proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-          </p>
-          <strong>Location:</strong>
-          <!-- MAP GOES HERE! -->
-        </div>
-      </div>
+      </div>/
     </div>
     
     <script src="foundation/js/vendor/jquery.js"></script>
