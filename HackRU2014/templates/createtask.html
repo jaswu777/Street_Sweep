@@ -22,7 +22,7 @@
             <div class="row">
               <div class="large-6 columns">
                 <label>Task Name
-                  <input type="text" placeholder="OMFG ITS SO DIRTY" />
+                  <input type="text" name="taskname" placeholder="OMFG ITS SO DIRTY" />
                 </label>
               </div>
               <div class="large-6 columns">
@@ -38,12 +38,33 @@
             <div class="row">
               <div class="large-12 columns">
                 <label>Task Description
-                  <textarea placeholder="In front of 207 there are a shit tonne of beer bottles"></textarea>
+                  <textarea name="description" placeholder="In front of 207 there are a shit tonne of beer bottles"></textarea>
                 </label>
               </div>
             </div>
             <div class="large-12 columns"> 
-              <!-- Put the map here!!! -->
+              <div class="row">
+                <div class="large-3 columns">
+                  <label>Street:
+                    <input type="text" name="street" placeholder="14445 Rutgers Ave." />
+                  </label>
+                </div>
+                <div class="large-3 columns">
+                  <label>City:
+                    <input type="text" name="city" placeholder="New Brunswick" />
+                  </label>
+                </div>
+                <div class="large-3 columns">
+                  <label>State:
+                    <input type="text" name="state" placeholder="New Jersey" />
+                  </label>
+                </div>
+                <div class="large-3 columns">
+                  <label>Country:
+                    <input type="text" name="country" placeholder="USA" />
+                  </label>
+                </div>
+              </div>
             </div>
           </form>
         </div>
